@@ -12,7 +12,7 @@ const data = [
 ];
 
 const CompactDeviceConsumptionChart = () => (
-  <ResponsiveContainer width="100%" height={250}>
+  <ResponsiveContainer width="100%" height={250} >
     <BarChart
       layout="vertical"
       data={data}

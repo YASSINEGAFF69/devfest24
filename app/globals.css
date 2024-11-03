@@ -181,6 +181,14 @@ body {
   cursor: pointer;
 }
 
+.ig-button {
+  background-color: white;
+  color: #007bff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 .apply-button:hover {
   background-color: #0056b3;
 }
@@ -190,4 +198,55 @@ body {
   display: flex;
   gap: 10px; /* Adjust the spacing as needed */
   margin-top: 10px;
+}
+
+/* globals.css */
+
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.gauge-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.gauge h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.notifications, .history {
+  margin-top: 30px;
+}
+
+.history-title {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.history-item {
+  background-color: #f1f1f1;
+  color: #555;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.details {
+  font-style: italic;
+  color: #555;
+  margin-top: 5px;
 }

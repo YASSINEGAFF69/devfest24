@@ -13,6 +13,7 @@ const Notification: React.FC<NotificationProps> = ({ message, onClose, onApply }
       <div className="notification-buttons">
         <button className='close-button text-red-600' onClick={onClose}>X</button>
         <button className='apply-button' onClick={onApply}>Apply</button>
+        <button className='ig-button' onClick={onApply}>Ignore</button>
       </div>
     </div>
   );

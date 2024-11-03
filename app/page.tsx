@@ -6,10 +6,10 @@ import GaugeChart from 'react-gauge-chart';
 import DeviceUsageChart from './DeviceUsageChart';
 import Notification from './Notification'; // Ensure this path is correct
 
-
 type NotificationType = {
   id: number;
   message: string;
+  details?: string;
 };
 
 export default function Home() {
@@ -22,7 +22,9 @@ export default function Home() {
     const timer = setTimeout(() => {
       const newNotification = {
         id: Date.now(),
-        message: "*Alert:* HVAC may need maintenance; washing_machine overconsuming !"
+        message: "*Alert:* HVAC may need maintenance; washing_machine overconsuming!",
+        details: `* *HVAC:* Consider scheduling a professional HVAC inspection to check for leaks, filter cleanliness, and overall efficiency.
+        * *Washing Machine:* Try washing clothes in cold water and air drying whenever possible. Consider using a shorter cycle for smaller loads.`
       };
       setNotifications([newNotification]);
     }, 2500);
@@ -95,7 +97,10 @@ export default function Home() {
       <div className="history">
         {notificationHistory.map(notification => (
           <div key={notification.id} className="history-item">
-            {notification.message}
+            <p className='text-gray-700'>{notification.message}</p>
+            {notification.details && (
+              <p className="details">Details:<br/> {notification.details}</p>
+            )}
           </div>
         ))}
       </div>
